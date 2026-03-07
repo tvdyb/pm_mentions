@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+*.egg-info/
+dist/
+build/
+.env
+.venv/
+data/transcripts/
+data/entities/
+data/markets/
+output/
+*.pkl
+.DS_Store
