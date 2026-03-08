@@ -1,6 +1,6 @@
 # Mention Market Systematic NO — Expanded Robustness Report
 
-Generated 2026-03-08 00:00 · 20,840 settled markets (20194 Kalshi, 646 Polymarket) · 205 series · 5 categories
+Generated 2026-03-08 00:07 · 20,840 settled markets (20194 Kalshi, 646 Polymarket) · 205 series · 5 categories
 
 ---
 
