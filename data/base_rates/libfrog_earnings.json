@@ -1,0 +1,2468 @@
+{
+  "companies": {
+    "WMT": {
+      "AI": {
+        "base_rate": 0.18055555555555555,
+        "n_calls": 72,
+        "n_mentions": 13,
+        "source": "libfrog"
+      },
+      "China": {
+        "base_rate": 0.9861111111111112,
+        "n_calls": 72,
+        "n_mentions": 71,
+        "source": "libfrog"
+      },
+      "Revenue": {
+        "base_rate": 0.8611111111111112,
+        "n_calls": 72,
+        "n_mentions": 62,
+        "source": "libfrog"
+      }
+    },
+    "MSTR": {
+      "AI": {
+        "base_rate": 0.29545454545454547,
+        "n_calls": 44,
+        "n_mentions": 13,
+        "source": "libfrog"
+      },
+      "China": {
+        "base_rate": 0.29545454545454547,
+        "n_calls": 44,
+        "n_mentions": 13,
+        "source": "libfrog"
+      },
+      "Revenue": {
+        "base_rate": 0.9545454545454546,
+        "n_calls": 44,
+        "n_mentions": 42,
+        "source": "libfrog"
+      }
+    },
+    "CRCL": {
+      "AI": {
+        "base_rate": 1,
+        "n_calls": 1,
+        "n_mentions": 1,
+        "source": "libfrog"
+      },
+      "China": {
+        "base_rate": 1,
+        "n_calls": 1,
+        "n_mentions": 1,
+        "source": "libfrog"
+      },
+      "Revenue": {
+        "base_rate": 1,
+        "n_calls": 1,
+        "n_mentions": 1,
+        "source": "libfrog"
+      }
+    },
+    "COINBASE": {
+      "AI": {
+        "base_rate": 0,
+        "n_calls": 0,
+        "n_mentions": 0,
+        "source": "libfrog"
+      },
+      "China": {
+        "base_rate": 0,
+        "n_calls": 0,
+        "n_mentions": 0,
+        "source": "libfrog"
+      },
+      "Revenue": {
+        "base_rate": 0,
+        "n_calls": 0,
+        "n_mentions": 0,
+        "source": "libfrog"
+      }
+    },
+    "DAL": {
+      "AI": {
+        "base_rate": 0.04411764705882353,
+        "n_calls": 68,
+        "n_mentions": 3,
+        "source": "libfrog"
+      },
+      "China": {
+        "base_rate": 0.5,
+        "n_calls": 68,
+        "n_mentions": 34,
+        "source": "libfrog"
+      },
+      "Revenue": {
+        "base_rate": 1,
+        "n_calls": 68,
+        "n_mentions": 68,
+        "source": "libfrog"
+      }
+    },
+    "LYFT": {
+      "AI": {
+        "base_rate": 0.18518518518518517,
+        "n_calls": 27,
+        "n_mentions": 5,
+        "source": "libfrog"
+      },
+      "China": {
+        "base_rate": 0.07407407407407407,
+        "n_calls": 27,
+        "n_mentions": 2,
+        "source": "libfrog"
+      },
+      "Revenue": {
+        "base_rate": 0.9629629629629629,
+        "n_calls": 27,
+        "n_mentions": 26,
+        "source": "libfrog"
+      }
+    },
+    "MTN": {
+      "AI": {
+        "base_rate": 0.06349206349206349,
+        "n_calls": 63,
+        "n_mentions": 4,
+        "source": "libfrog"
+      },
+      "China": {
+        "base_rate": 0.09523809523809523,
+        "n_calls": 63,
+        "n_mentions": 6,
+        "source": "libfrog"
+      },
+      "Revenue": {
+        "base_rate": 0.9841269841269841,
+        "n_calls": 63,
+        "n_mentions": 62,
+        "source": "libfrog"
+      }
+    },
+    "CVNA": {
+      "AI": {
+        "base_rate": 0.19444444444444445,
+        "n_calls": 36,
+        "n_mentions": 7,
+        "source": "libfrog"
+      },
+      "China": {
+        "base_rate": 0,
+        "n_calls": 36,
+        "n_mentions": 0,
+        "source": "libfrog"
+      },
+      "Revenue": {
+        "base_rate": 1,
+        "n_calls": 36,
+        "n_mentions": 36,
+        "source": "libfrog"
+      }
+    },
+    "ON": {
+      "AI": {
+        "base_rate": 0.14102564102564102,
+        "n_calls": 78,
+        "n_mentions": 11,
+        "source": "libfrog"
+      },
+      "China": {
+        "base_rate": 0.7564102564102564,
+        "n_calls": 78,
+        "n_mentions": 59,
+        "source": "libfrog"
+      },
+      "Revenue": {
+        "base_rate": 0.9615384615384616,
+        "n_calls": 78,
+        "n_mentions": 75,
+        "source": "libfrog"
+      }
+    },
+    "AAL": {
+      "AI": {
+        "base_rate": 0.04054054054054054,
+        "n_calls": 74,
+        "n_mentions": 3,
+        "source": "libfrog"
+      },
+      "China": {
+        "base_rate": 0.28378378378378377,
+        "n_calls": 74,
+        "n_mentions": 21,
+        "source": "libfrog"
+      },
+      "Revenue": {
+        "base_rate": 1,
+        "n_calls": 74,
+        "n_mentions": 74,
+        "source": "libfrog"
+      }
+    },
+    "JNJ": {
+      "AI": {
+        "base_rate": 0.04054054054054054,
+        "n_calls": 74,
+        "n_mentions": 3,
+        "source": "libfrog"
+      },
+      "China": {
+        "base_rate": 0.8783783783783784,
+        "n_calls": 74,
+        "n_mentions": 65,
+        "source": "libfrog"
+      },
+      "Revenue": {
+        "base_rate": 0.6621621621621622,
+        "n_calls": 74,
+        "n_mentions": 49,
+        "source": "libfrog"
+      }
+    },
+    "DE": {
+      "AI": {
+        "base_rate": 0.02702702702702703,
+        "n_calls": 74,
+        "n_mentions": 2,
+        "source": "libfrog"
+      },
+      "China": {
+        "base_rate": 0.6756756756756757,
+        "n_calls": 74,
+        "n_mentions": 50,
+        "source": "libfrog"
+      },
+      "Revenue": {
+        "base_rate": 0.581081081081081,
+        "n_calls": 74,
+        "n_mentions": 43,
+        "source": "libfrog"
+      }
+    },
+    "V": {
+      "AI": {
+        "base_rate": 0.15714285714285714,
+        "n_calls": 70,
+        "n_mentions": 11,
+        "source": "libfrog"
+      },
+      "China": {
+        "base_rate": 0.7571428571428571,
+        "n_calls": 70,
+        "n_mentions": 53,
+        "source": "libfrog"
+      },
+      "Revenue": {
+        "base_rate": 1,
+        "n_calls": 70,
+        "n_mentions": 70,
+        "source": "libfrog"
+      }
+    },
+    "NFLX": {
+      "AI": {
+        "base_rate": 0.0641025641025641,
+        "n_calls": 78,
+        "n_mentions": 5,
+        "source": "libfrog"
+      },
+      "China": {
+        "base_rate": 0.2692307692307692,
+        "n_calls": 78,
+        "n_mentions": 21,
+        "source": "libfrog"
+      },
+      "Revenue": {
+        "base_rate": 0.9102564102564102,
+        "n_calls": 78,
+        "n_mentions": 71,
+        "source": "libfrog"
+      }
+    },
+    "CRWV": {
+      "AI": {
+        "base_rate": 1,
+        "n_calls": 3,
+        "n_mentions": 3,
+        "source": "libfrog"
+      },
+      "China": {
+        "base_rate": 0,
+        "n_calls": 3,
+        "n_mentions": 0,
+        "source": "libfrog"
+      },
+      "Revenue": {
+        "base_rate": 1,
+        "n_calls": 3,
+        "n_mentions": 3,
+        "source": "libfrog"
+      }
+    },
+    "PLTR": {
+      "AI": {
+        "base_rate": 0.9545454545454546,
+        "n_calls": 22,
+        "n_mentions": 21,
+        "source": "libfrog"
+      },
+      "China": {
+        "base_rate": 0.3181818181818182,
+        "n_calls": 22,
+        "n_mentions": 7,
+        "source": "libfrog"
+      },
+      "Revenue": {
+        "base_rate": 1,
+        "n_calls": 22,
+        "n_mentions": 22,
+        "source": "libfrog"
+      }
+    },
+    "MCO": {
+      "AI": {
+        "base_rate": 0.28378378378378377,
+        "n_calls": 74,
+        "n_mentions": 21,
+        "source": "libfrog"
+      },
+      "China": {
+        "base_rate": 0.40540540540540543,
+        "n_calls": 74,
+        "n_mentions": 30,
+        "source": "libfrog"
+      },
+      "Revenue": {
+        "base_rate": 0.9594594594594594,
+        "n_calls": 74,
+        "n_mentions": 71,
+        "source": "libfrog"
+      }
+    },
+    "DPZ": {
+      "AI": {
+        "base_rate": 0.09375,
+        "n_calls": 64,
+        "n_mentions": 6,
+        "source": "libfrog"
+      },
+      "China": {
+        "base_rate": 0.46875,
+        "n_calls": 64,
+        "n_mentions": 30,
+        "source": "libfrog"
+      },
+      "Revenue": {
+        "base_rate": 0.4375,
+        "n_calls": 64,
+        "n_mentions": 28,
+        "source": "libfrog"
+      }
+    },
+    "NBIS": {
+      "AI": {
+        "base_rate": 0.26666666666666666,
+        "n_calls": 45,
+        "n_mentions": 12,
+        "source": "libfrog"
+      },
+      "China": {
+        "base_rate": 0.13333333333333333,
+        "n_calls": 45,
+        "n_mentions": 6,
+        "source": "libfrog"
+      },
+      "Revenue": {
+        "base_rate": 1,
+        "n_calls": 45,
+        "n_mentions": 45,
+        "source": "libfrog"
+      }
+    },
+    "META": {
+      "AI": {
+        "base_rate": 0.7169811320754716,
+        "n_calls": 53,
+        "n_mentions": 38,
+        "source": "libfrog"
+      },
+      "Metaverse": {
+        "base_rate": 0.3018867924528302,
+        "n_calls": 53,
+        "n_mentions": 16,
+        "source": "libfrog"
+      },
+      "Reality Labs": {
+        "base_rate": 0.37735849056603776,
+        "n_calls": 53,
+        "n_mentions": 20,
+        "source": "libfrog"
+      },
+      "Instagram": {
+        "base_rate": 1,
+        "n_calls": 53,
+        "n_mentions": 53,
+        "source": "libfrog"
+      },
+      "WhatsApp": {
+        "base_rate": 0.8867924528301887,
+        "n_calls": 53,
+        "n_mentions": 47,
+        "source": "libfrog"
+      },
+      "Threads": {
+        "base_rate": 0.2641509433962264,
+        "n_calls": 53,
+        "n_mentions": 14,
+        "source": "libfrog"
+      },
+      "Llama": {
+        "base_rate": 0.20754716981132076,
+        "n_calls": 53,
+        "n_mentions": 11,
+        "source": "libfrog"
+      },
+      "Advertising": {
+        "base_rate": 1,
+        "n_calls": 53,
+        "n_mentions": 53,
+        "source": "libfrog"
+      }
+    },
+    "BLK": {
+      "AI": {
+        "base_rate": 0.22535211267605634,
+        "n_calls": 71,
+        "n_mentions": 16,
+        "source": "libfrog"
+      },
+      "China": {
+        "base_rate": 0.36619718309859156,
+        "n_calls": 71,
+        "n_mentions": 26,
+        "source": "libfrog"
+      },
+      "Revenue": {
+        "base_rate": 0.971830985915493,
+        "n_calls": 71,
+        "n_mentions": 69,
+        "source": "libfrog"
+      }
+    },
+    "GOOGL": {
+      "AI": {
+        "base_rate": 0.5,
+        "n_calls": 82,
+        "n_mentions": 41,
+        "source": "libfrog"
+      },
+      "Gemini": {
+        "base_rate": 0.13414634146341464,
+        "n_calls": 82,
+        "n_mentions": 11,
+        "source": "libfrog"
+      },
+      "Search": {
+        "base_rate": 0.9878048780487805,
+        "n_calls": 82,
+        "n_mentions": 81,
+        "source": "libfrog"
+      },
+      "YouTube": {
+        "base_rate": 0.9390243902439024,
+        "n_calls": 82,
+        "n_mentions": 77,
+        "source": "libfrog"
+      },
+      "Cloud": {
+        "base_rate": 0.7682926829268293,
+        "n_calls": 82,
+        "n_mentions": 63,
+        "source": "libfrog"
+      },
+      "Waymo": {
+        "base_rate": 0.36585365853658536,
+        "n_calls": 82,
+        "n_mentions": 30,
+        "source": "libfrog"
+      },
+      "Antitrust": {
+        "base_rate": 0.012195121951219513,
+        "n_calls": 82,
+        "n_mentions": 1,
+        "source": "libfrog"
+      }
+    },
+    "DOCUSIGN": {
+      "AI": {
+        "base_rate": 0,
+        "n_calls": 0,
+        "n_mentions": 0,
+        "source": "libfrog"
+      },
+      "China": {
+        "base_rate": 0,
+        "n_calls": 0,
+        "n_mentions": 0,
+        "source": "libfrog"
+      },
+      "Revenue": {
+        "base_rate": 0,
+        "n_calls": 0,
+        "n_mentions": 0,
+        "source": "libfrog"
+      }
+    },
+    "AVAV": {
+      "AI": {
+        "base_rate": 0.2857142857142857,
+        "n_calls": 63,
+        "n_mentions": 18,
+        "source": "libfrog"
+      },
+      "China": {
+        "base_rate": 0.07936507936507936,
+        "n_calls": 63,
+        "n_mentions": 5,
+        "source": "libfrog"
+      },
+      "Revenue": {
+        "base_rate": 1,
+        "n_calls": 63,
+        "n_mentions": 63,
+        "source": "libfrog"
+      }
+    },
+    "ALIBABA": {
+      "AI": {
+        "base_rate": 0,
+        "n_calls": 0,
+        "n_mentions": 0,
+        "source": "libfrog"
+      },
+      "China": {
+        "base_rate": 0,
+        "n_calls": 0,
+        "n_mentions": 0,
+        "source": "libfrog"
+      },
+      "Revenue": {
+        "base_rate": 0,
+        "n_calls": 0,
+        "n_mentions": 0,
+        "source": "libfrog"
+      }
+    },
+    "DASH": {
+      "AI": {
+        "base_rate": 0.3333333333333333,
+        "n_calls": 21,
+        "n_mentions": 7,
+        "source": "libfrog"
+      },
+      "China": {
+        "base_rate": 0,
+        "n_calls": 21,
+        "n_mentions": 0,
+        "source": "libfrog"
+      },
+      "Revenue": {
+        "base_rate": 0.8571428571428571,
+        "n_calls": 21,
+        "n_mentions": 18,
+        "source": "libfrog"
+      }
+    },
+    "WING": {
+      "AI": {
+        "base_rate": 0.16666666666666666,
+        "n_calls": 42,
+        "n_mentions": 7,
+        "source": "libfrog"
+      },
+      "China": {
+        "base_rate": 0.19047619047619047,
+        "n_calls": 42,
+        "n_mentions": 8,
+        "source": "libfrog"
+      },
+      "Revenue": {
+        "base_rate": 0.9761904761904762,
+        "n_calls": 42,
+        "n_mentions": 41,
+        "source": "libfrog"
+      }
+    },
+    "AMZN": {
+      "AWS": {
+        "base_rate": 0.7530864197530864,
+        "n_calls": 81,
+        "n_mentions": 61,
+        "source": "libfrog"
+      },
+      "AI": {
+        "base_rate": 0.1728395061728395,
+        "n_calls": 81,
+        "n_mentions": 14,
+        "source": "libfrog"
+      },
+      "Alexa": {
+        "base_rate": 0.35802469135802467,
+        "n_calls": 81,
+        "n_mentions": 29,
+        "source": "libfrog"
+      },
+      "Prime": {
+        "base_rate": 0.9629629629629629,
+        "n_calls": 81,
+        "n_mentions": 78,
+        "source": "libfrog"
+      },
+      "Advertising": {
+        "base_rate": 0.5925925925925926,
+        "n_calls": 81,
+        "n_mentions": 48,
+        "source": "libfrog"
+      },
+      "Grocery": {
+        "base_rate": 0.4444444444444444,
+        "n_calls": 81,
+        "n_mentions": 36,
+        "source": "libfrog"
+      }
+    },
+    "ANF": {
+      "AI": {
+        "base_rate": 0.013157894736842105,
+        "n_calls": 76,
+        "n_mentions": 1,
+        "source": "libfrog"
+      },
+      "China": {
+        "base_rate": 0.7236842105263158,
+        "n_calls": 76,
+        "n_mentions": 55,
+        "source": "libfrog"
+      },
+      "Revenue": {
+        "base_rate": 0.2236842105263158,
+        "n_calls": 76,
+        "n_mentions": 17,
+        "source": "libfrog"
+      }
+    },
+    "TSLA": {
+      "Robotaxi": {
+        "base_rate": 0.288135593220339,
+        "n_calls": 59,
+        "n_mentions": 17,
+        "source": "libfrog"
+      },
+      "Cybertruck": {
+        "base_rate": 0.3728813559322034,
+        "n_calls": 59,
+        "n_mentions": 22,
+        "source": "libfrog"
+      },
+      "FSD": {
+        "base_rate": 0.4576271186440678,
+        "n_calls": 59,
+        "n_mentions": 27,
+        "source": "libfrog"
+      },
+      "Full Self-Driving": {
+        "base_rate": 0.4745762711864407,
+        "n_calls": 59,
+        "n_mentions": 28,
+        "source": "libfrog"
+      },
+      "China": {
+        "base_rate": 0.7288135593220338,
+        "n_calls": 59,
+        "n_mentions": 43,
+        "source": "libfrog"
+      },
+      "AI": {
+        "base_rate": 0.4406779661016949,
+        "n_calls": 59,
+        "n_mentions": 26,
+        "source": "libfrog"
+      },
+      "Optimus": {
+        "base_rate": 0.2542372881355932,
+        "n_calls": 59,
+        "n_mentions": 15,
+        "source": "libfrog"
+      },
+      "Solar": {
+        "base_rate": 0.6610169491525424,
+        "n_calls": 59,
+        "n_mentions": 39,
+        "source": "libfrog"
+      },
+      "Megapack": {
+        "base_rate": 0.3898305084745763,
+        "n_calls": 59,
+        "n_mentions": 23,
+        "source": "libfrog"
+      }
+    },
+    "WFC": {
+      "AI": {
+        "base_rate": 0.12,
+        "n_calls": 75,
+        "n_mentions": 9,
+        "source": "libfrog"
+      },
+      "China": {
+        "base_rate": 0.013333333333333334,
+        "n_calls": 75,
+        "n_mentions": 1,
+        "source": "libfrog"
+      },
+      "Revenue": {
+        "base_rate": 0.9866666666666667,
+        "n_calls": 75,
+        "n_mentions": 74,
+        "source": "libfrog"
+      }
+    },
+    "CAR": {
+      "AI": {
+        "base_rate": 0.013513513513513514,
+        "n_calls": 74,
+        "n_mentions": 1,
+        "source": "libfrog"
+      },
+      "China": {
+        "base_rate": 0.22972972972972974,
+        "n_calls": 74,
+        "n_mentions": 17,
+        "source": "libfrog"
+      },
+      "Revenue": {
+        "base_rate": 0.9864864864864865,
+        "n_calls": 74,
+        "n_mentions": 73,
+        "source": "libfrog"
+      }
+    },
+    "CRM": {
+      "AI": {
+        "base_rate": 0.4342105263157895,
+        "n_calls": 76,
+        "n_mentions": 33,
+        "source": "libfrog"
+      },
+      "China": {
+        "base_rate": 0.06578947368421052,
+        "n_calls": 76,
+        "n_mentions": 5,
+        "source": "libfrog"
+      },
+      "Revenue": {
+        "base_rate": 1,
+        "n_calls": 76,
+        "n_mentions": 76,
+        "source": "libfrog"
+      }
+    },
+    "GEV": {
+      "AI": {
+        "base_rate": 0.42857142857142855,
+        "n_calls": 7,
+        "n_mentions": 3,
+        "source": "libfrog"
+      },
+      "China": {
+        "base_rate": 0.42857142857142855,
+        "n_calls": 7,
+        "n_mentions": 3,
+        "source": "libfrog"
+      },
+      "Revenue": {
+        "base_rate": 1,
+        "n_calls": 7,
+        "n_mentions": 7,
+        "source": "libfrog"
+      }
+    },
+    "ACI": {
+      "AI": {
+        "base_rate": 0.5555555555555556,
+        "n_calls": 18,
+        "n_mentions": 10,
+        "source": "libfrog"
+      },
+      "China": {
+        "base_rate": 0,
+        "n_calls": 18,
+        "n_mentions": 0,
+        "source": "libfrog"
+      },
+      "Revenue": {
+        "base_rate": 0.6111111111111112,
+        "n_calls": 18,
+        "n_mentions": 11,
+        "source": "libfrog"
+      }
+    },
+    "GS": {
+      "AI": {
+        "base_rate": 0.09210526315789473,
+        "n_calls": 76,
+        "n_mentions": 7,
+        "source": "libfrog"
+      },
+      "China": {
+        "base_rate": 0.34210526315789475,
+        "n_calls": 76,
+        "n_mentions": 26,
+        "source": "libfrog"
+      },
+      "Revenue": {
+        "base_rate": 0.8947368421052632,
+        "n_calls": 76,
+        "n_mentions": 68,
+        "source": "libfrog"
+      }
+    },
+    "ADOBE": {
+      "AI": {
+        "base_rate": 0,
+        "n_calls": 0,
+        "n_mentions": 0,
+        "source": "libfrog"
+      },
+      "China": {
+        "base_rate": 0,
+        "n_calls": 0,
+        "n_mentions": 0,
+        "source": "libfrog"
+      },
+      "Revenue": {
+        "base_rate": 0,
+        "n_calls": 0,
+        "n_mentions": 0,
+        "source": "libfrog"
+      }
+    },
+    "SNAP": {
+      "AI": {
+        "base_rate": 0.3611111111111111,
+        "n_calls": 36,
+        "n_mentions": 13,
+        "source": "libfrog"
+      },
+      "China": {
+        "base_rate": 0.1388888888888889,
+        "n_calls": 36,
+        "n_mentions": 5,
+        "source": "libfrog"
+      },
+      "Revenue": {
+        "base_rate": 1,
+        "n_calls": 36,
+        "n_mentions": 36,
+        "source": "libfrog"
+      }
+    },
+    "PEP": {
+      "AI": {
+        "base_rate": 0.02666666666666667,
+        "n_calls": 75,
+        "n_mentions": 2,
+        "source": "libfrog"
+      },
+      "China": {
+        "base_rate": 0.8266666666666667,
+        "n_calls": 75,
+        "n_mentions": 62,
+        "source": "libfrog"
+      },
+      "Revenue": {
+        "base_rate": 0.9466666666666667,
+        "n_calls": 75,
+        "n_mentions": 71,
+        "source": "libfrog"
+      }
+    },
+    "CRWD": {
+      "AI": {
+        "base_rate": 0.9259259259259259,
+        "n_calls": 27,
+        "n_mentions": 25,
+        "source": "libfrog"
+      },
+      "China": {
+        "base_rate": 0.1111111111111111,
+        "n_calls": 27,
+        "n_mentions": 3,
+        "source": "libfrog"
+      },
+      "Revenue": {
+        "base_rate": 1,
+        "n_calls": 27,
+        "n_mentions": 27,
+        "source": "libfrog"
+      }
+    },
+    "RKLB": {
+      "AI": {
+        "base_rate": 0,
+        "n_calls": 18,
+        "n_mentions": 0,
+        "source": "libfrog"
+      },
+      "China": {
+        "base_rate": 0,
+        "n_calls": 18,
+        "n_mentions": 0,
+        "source": "libfrog"
+      },
+      "Revenue": {
+        "base_rate": 1,
+        "n_calls": 18,
+        "n_mentions": 18,
+        "source": "libfrog"
+      }
+    },
+    "UBER": {
+      "AI": {
+        "base_rate": 0.25,
+        "n_calls": 28,
+        "n_mentions": 7,
+        "source": "libfrog"
+      },
+      "China": {
+        "base_rate": 0.32142857142857145,
+        "n_calls": 28,
+        "n_mentions": 9,
+        "source": "libfrog"
+      },
+      "Revenue": {
+        "base_rate": 0.8214285714285714,
+        "n_calls": 28,
+        "n_mentions": 23,
+        "source": "libfrog"
+      }
+    },
+    "KKR": {
+      "AI": {
+        "base_rate": 0.07352941176470588,
+        "n_calls": 68,
+        "n_mentions": 5,
+        "source": "libfrog"
+      },
+      "China": {
+        "base_rate": 0.36764705882352944,
+        "n_calls": 68,
+        "n_mentions": 25,
+        "source": "libfrog"
+      },
+      "Revenue": {
+        "base_rate": 0.8676470588235294,
+        "n_calls": 68,
+        "n_mentions": 59,
+        "source": "libfrog"
+      }
+    },
+    "EA": {
+      "AI": {
+        "base_rate": 0.2,
+        "n_calls": 80,
+        "n_mentions": 16,
+        "source": "libfrog"
+      },
+      "China": {
+        "base_rate": 0.525,
+        "n_calls": 80,
+        "n_mentions": 42,
+        "source": "libfrog"
+      },
+      "Revenue": {
+        "base_rate": 1,
+        "n_calls": 80,
+        "n_mentions": 80,
+        "source": "libfrog"
+      }
+    },
+    "CELH": {
+      "AI": {
+        "base_rate": 0.02564102564102564,
+        "n_calls": 39,
+        "n_mentions": 1,
+        "source": "libfrog"
+      },
+      "China": {
+        "base_rate": 0.5897435897435898,
+        "n_calls": 39,
+        "n_mentions": 23,
+        "source": "libfrog"
+      },
+      "Revenue": {
+        "base_rate": 1,
+        "n_calls": 39,
+        "n_mentions": 39,
+        "source": "libfrog"
+      }
+    },
+    "TGT": {
+      "AI": {
+        "base_rate": 0.14666666666666667,
+        "n_calls": 75,
+        "n_mentions": 11,
+        "source": "libfrog"
+      },
+      "China": {
+        "base_rate": 0.10666666666666667,
+        "n_calls": 75,
+        "n_mentions": 8,
+        "source": "libfrog"
+      },
+      "Revenue": {
+        "base_rate": 0.4666666666666667,
+        "n_calls": 75,
+        "n_mentions": 35,
+        "source": "libfrog"
+      }
+    },
+    "HIMS": {
+      "AI": {
+        "base_rate": 0.55,
+        "n_calls": 20,
+        "n_mentions": 11,
+        "source": "libfrog"
+      },
+      "China": {
+        "base_rate": 0,
+        "n_calls": 20,
+        "n_mentions": 0,
+        "source": "libfrog"
+      },
+      "Revenue": {
+        "base_rate": 1,
+        "n_calls": 20,
+        "n_mentions": 20,
+        "source": "libfrog"
+      }
+    },
+    "QCOM": {
+      "AI": {
+        "base_rate": 0.2875,
+        "n_calls": 80,
+        "n_mentions": 23,
+        "source": "libfrog"
+      },
+      "China": {
+        "base_rate": 0.9875,
+        "n_calls": 80,
+        "n_mentions": 79,
+        "source": "libfrog"
+      },
+      "Revenue": {
+        "base_rate": 0.9875,
+        "n_calls": 80,
+        "n_mentions": 79,
+        "source": "libfrog"
+      }
+    },
+    "AVGO": {
+      "AI": {
+        "base_rate": 0.275,
+        "n_calls": 80,
+        "n_mentions": 22,
+        "source": "libfrog"
+      },
+      "China": {
+        "base_rate": 0.7375,
+        "n_calls": 80,
+        "n_mentions": 59,
+        "source": "libfrog"
+      },
+      "Revenue": {
+        "base_rate": 1,
+        "n_calls": 80,
+        "n_mentions": 80,
+        "source": "libfrog"
+      }
+    },
+    "NYT": {
+      "AI": {
+        "base_rate": 0.15,
+        "n_calls": 80,
+        "n_mentions": 12,
+        "source": "libfrog"
+      },
+      "China": {
+        "base_rate": 0.0625,
+        "n_calls": 80,
+        "n_mentions": 5,
+        "source": "libfrog"
+      },
+      "Revenue": {
+        "base_rate": 0.9875,
+        "n_calls": 80,
+        "n_mentions": 79,
+        "source": "libfrog"
+      }
+    },
+    "STZ": {
+      "AI": {
+        "base_rate": 0,
+        "n_calls": 71,
+        "n_mentions": 0,
+        "source": "libfrog"
+      },
+      "China": {
+        "base_rate": 0.056338028169014086,
+        "n_calls": 71,
+        "n_mentions": 4,
+        "source": "libfrog"
+      },
+      "Revenue": {
+        "base_rate": 0.38028169014084506,
+        "n_calls": 71,
+        "n_mentions": 27,
+        "source": "libfrog"
+      }
+    },
+    "ADBE": {
+      "AI": {
+        "base_rate": 0.4,
+        "n_calls": 80,
+        "n_mentions": 32,
+        "source": "libfrog"
+      },
+      "China": {
+        "base_rate": 0.1375,
+        "n_calls": 80,
+        "n_mentions": 11,
+        "source": "libfrog"
+      },
+      "Revenue": {
+        "base_rate": 1,
+        "n_calls": 80,
+        "n_mentions": 80,
+        "source": "libfrog"
+      }
+    },
+    "JPM": {
+      "AI": {
+        "base_rate": 0.1891891891891892,
+        "n_calls": 74,
+        "n_mentions": 14,
+        "source": "libfrog"
+      },
+      "China": {
+        "base_rate": 0.2972972972972973,
+        "n_calls": 74,
+        "n_mentions": 22,
+        "source": "libfrog"
+      },
+      "Revenue": {
+        "base_rate": 1,
+        "n_calls": 74,
+        "n_mentions": 74,
+        "source": "libfrog"
+      }
+    },
+    "INTC": {
+      "AI": {
+        "base_rate": 0.45,
+        "n_calls": 80,
+        "n_mentions": 36,
+        "source": "libfrog"
+      },
+      "China": {
+        "base_rate": 0.6875,
+        "n_calls": 80,
+        "n_mentions": 55,
+        "source": "libfrog"
+      },
+      "Revenue": {
+        "base_rate": 1,
+        "n_calls": 80,
+        "n_mentions": 80,
+        "source": "libfrog"
+      }
+    },
+    "HLT": {
+      "AI": {
+        "base_rate": 0.09803921568627451,
+        "n_calls": 51,
+        "n_mentions": 5,
+        "source": "libfrog"
+      },
+      "China": {
+        "base_rate": 1,
+        "n_calls": 51,
+        "n_mentions": 51,
+        "source": "libfrog"
+      },
+      "Revenue": {
+        "base_rate": 0.7843137254901961,
+        "n_calls": 51,
+        "n_mentions": 40,
+        "source": "libfrog"
+      }
+    },
+    "NKE": {
+      "AI": {
+        "base_rate": 0.012987012987012988,
+        "n_calls": 77,
+        "n_mentions": 1,
+        "source": "libfrog"
+      },
+      "China": {
+        "base_rate": 1,
+        "n_calls": 77,
+        "n_mentions": 77,
+        "source": "libfrog"
+      },
+      "Revenue": {
+        "base_rate": 1,
+        "n_calls": 77,
+        "n_mentions": 77,
+        "source": "libfrog"
+      }
+    },
+    "GME": {
+      "AI": {
+        "base_rate": 0,
+        "n_calls": 69,
+        "n_mentions": 0,
+        "source": "libfrog"
+      },
+      "China": {
+        "base_rate": 0,
+        "n_calls": 69,
+        "n_mentions": 0,
+        "source": "libfrog"
+      },
+      "Revenue": {
+        "base_rate": 0.7101449275362319,
+        "n_calls": 69,
+        "n_mentions": 49,
+        "source": "libfrog"
+      }
+    },
+    "ISRG": {
+      "AI": {
+        "base_rate": 0.1527777777777778,
+        "n_calls": 72,
+        "n_mentions": 11,
+        "source": "libfrog"
+      },
+      "China": {
+        "base_rate": 0.6944444444444444,
+        "n_calls": 72,
+        "n_mentions": 50,
+        "source": "libfrog"
+      },
+      "Revenue": {
+        "base_rate": 0.9444444444444444,
+        "n_calls": 72,
+        "n_mentions": 68,
+        "source": "libfrog"
+      }
+    },
+    "NIO": {
+      "AI": {
+        "base_rate": 0.1724137931034483,
+        "n_calls": 29,
+        "n_mentions": 5,
+        "source": "libfrog"
+      },
+      "China": {
+        "base_rate": 0.9655172413793104,
+        "n_calls": 29,
+        "n_mentions": 28,
+        "source": "libfrog"
+      },
+      "Revenue": {
+        "base_rate": 0.8620689655172413,
+        "n_calls": 29,
+        "n_mentions": 25,
+        "source": "libfrog"
+      }
+    },
+    "ETOR": {
+      "AI": {
+        "base_rate": 1,
+        "n_calls": 2,
+        "n_mentions": 2,
+        "source": "libfrog"
+      },
+      "China": {
+        "base_rate": 0,
+        "n_calls": 2,
+        "n_mentions": 0,
+        "source": "libfrog"
+      },
+      "Revenue": {
+        "base_rate": 1,
+        "n_calls": 2,
+        "n_mentions": 2,
+        "source": "libfrog"
+      }
+    },
+    "DOLLARGENERAL": {
+      "AI": {
+        "base_rate": 0,
+        "n_calls": 0,
+        "n_mentions": 0,
+        "source": "libfrog"
+      },
+      "China": {
+        "base_rate": 0,
+        "n_calls": 0,
+        "n_mentions": 0,
+        "source": "libfrog"
+      },
+      "Revenue": {
+        "base_rate": 0,
+        "n_calls": 0,
+        "n_mentions": 0,
+        "source": "libfrog"
+      }
+    },
+    "AMD": {
+      "AI": {
+        "base_rate": 0.3333333333333333,
+        "n_calls": 75,
+        "n_mentions": 25,
+        "source": "libfrog"
+      },
+      "China": {
+        "base_rate": 0.8533333333333334,
+        "n_calls": 75,
+        "n_mentions": 64,
+        "source": "libfrog"
+      },
+      "Revenue": {
+        "base_rate": 1,
+        "n_calls": 75,
+        "n_mentions": 75,
+        "source": "libfrog"
+      }
+    },
+    "PSKY": {
+      "AI": {
+        "base_rate": 0,
+        "n_calls": 0,
+        "n_mentions": 0,
+        "source": "libfrog"
+      },
+      "China": {
+        "base_rate": 0,
+        "n_calls": 0,
+        "n_mentions": 0,
+        "source": "libfrog"
+      },
+      "Revenue": {
+        "base_rate": 0,
+        "n_calls": 0,
+        "n_mentions": 0,
+        "source": "libfrog"
+      }
+    },
+    "TSMC": {
+      "AI": {
+        "base_rate": 0,
+        "n_calls": 0,
+        "n_mentions": 0,
+        "source": "libfrog"
+      },
+      "China": {
+        "base_rate": 0,
+        "n_calls": 0,
+        "n_mentions": 0,
+        "source": "libfrog"
+      },
+      "Revenue": {
+        "base_rate": 0,
+        "n_calls": 0,
+        "n_mentions": 0,
+        "source": "libfrog"
+      }
+    },
+    "UAL": {
+      "AI": {
+        "base_rate": 0.014084507042253521,
+        "n_calls": 71,
+        "n_mentions": 1,
+        "source": "libfrog"
+      },
+      "China": {
+        "base_rate": 0.6619718309859155,
+        "n_calls": 71,
+        "n_mentions": 47,
+        "source": "libfrog"
+      },
+      "Revenue": {
+        "base_rate": 1,
+        "n_calls": 71,
+        "n_mentions": 71,
+        "source": "libfrog"
+      }
+    },
+    "BAC": {
+      "AI": {
+        "base_rate": 0.1917808219178082,
+        "n_calls": 73,
+        "n_mentions": 14,
+        "source": "libfrog"
+      },
+      "China": {
+        "base_rate": 0.1780821917808219,
+        "n_calls": 73,
+        "n_mentions": 13,
+        "source": "libfrog"
+      },
+      "Revenue": {
+        "base_rate": 1,
+        "n_calls": 73,
+        "n_mentions": 73,
+        "source": "libfrog"
+      }
+    },
+    "PYPL": {
+      "AI": {
+        "base_rate": 0.35,
+        "n_calls": 40,
+        "n_mentions": 14,
+        "source": "libfrog"
+      },
+      "China": {
+        "base_rate": 0.45,
+        "n_calls": 40,
+        "n_mentions": 18,
+        "source": "libfrog"
+      },
+      "Revenue": {
+        "base_rate": 1,
+        "n_calls": 40,
+        "n_mentions": 40,
+        "source": "libfrog"
+      }
+    },
+    "DKNG": {
+      "AI": {
+        "base_rate": 0.2916666666666667,
+        "n_calls": 24,
+        "n_mentions": 7,
+        "source": "libfrog"
+      },
+      "China": {
+        "base_rate": 0,
+        "n_calls": 24,
+        "n_mentions": 0,
+        "source": "libfrog"
+      },
+      "Revenue": {
+        "base_rate": 1,
+        "n_calls": 24,
+        "n_mentions": 24,
+        "source": "libfrog"
+      }
+    },
+    "HPE": {
+      "AI": {
+        "base_rate": 0.85,
+        "n_calls": 40,
+        "n_mentions": 34,
+        "source": "libfrog"
+      },
+      "China": {
+        "base_rate": 0.7,
+        "n_calls": 40,
+        "n_mentions": 28,
+        "source": "libfrog"
+      },
+      "Revenue": {
+        "base_rate": 1,
+        "n_calls": 40,
+        "n_mentions": 40,
+        "source": "libfrog"
+      }
+    },
+    "CMG": {
+      "AI": {
+        "base_rate": 0.1095890410958904,
+        "n_calls": 73,
+        "n_mentions": 8,
+        "source": "libfrog"
+      },
+      "China": {
+        "base_rate": 0.0410958904109589,
+        "n_calls": 73,
+        "n_mentions": 3,
+        "source": "libfrog"
+      },
+      "Revenue": {
+        "base_rate": 0.6712328767123288,
+        "n_calls": 73,
+        "n_mentions": 49,
+        "source": "libfrog"
+      }
+    },
+    "SNOW": {
+      "AI": {
+        "base_rate": 0.42424242424242425,
+        "n_calls": 33,
+        "n_mentions": 14,
+        "source": "libfrog"
+      },
+      "China": {
+        "base_rate": 0.06060606060606061,
+        "n_calls": 33,
+        "n_mentions": 2,
+        "source": "libfrog"
+      },
+      "Revenue": {
+        "base_rate": 1,
+        "n_calls": 33,
+        "n_mentions": 33,
+        "source": "libfrog"
+      }
+    },
+    "KTOS": {
+      "AI": {
+        "base_rate": 0.15517241379310345,
+        "n_calls": 58,
+        "n_mentions": 9,
+        "source": "libfrog"
+      },
+      "China": {
+        "base_rate": 0.3448275862068966,
+        "n_calls": 58,
+        "n_mentions": 20,
+        "source": "libfrog"
+      },
+      "Revenue": {
+        "base_rate": 1,
+        "n_calls": 58,
+        "n_mentions": 58,
+        "source": "libfrog"
+      }
+    },
+    "MU": {
+      "AI": {
+        "base_rate": 0.4230769230769231,
+        "n_calls": 78,
+        "n_mentions": 33,
+        "source": "libfrog"
+      },
+      "China": {
+        "base_rate": 0.48717948717948717,
+        "n_calls": 78,
+        "n_mentions": 38,
+        "source": "libfrog"
+      },
+      "Revenue": {
+        "base_rate": 1,
+        "n_calls": 78,
+        "n_mentions": 78,
+        "source": "libfrog"
+      }
+    },
+    "ABNB": {
+      "AI": {
+        "base_rate": 0.6190476190476191,
+        "n_calls": 21,
+        "n_mentions": 13,
+        "source": "libfrog"
+      },
+      "China": {
+        "base_rate": 0.5238095238095238,
+        "n_calls": 21,
+        "n_mentions": 11,
+        "source": "libfrog"
+      },
+      "Revenue": {
+        "base_rate": 1,
+        "n_calls": 21,
+        "n_mentions": 21,
+        "source": "libfrog"
+      }
+    },
+    "LLY": {
+      "AI": {
+        "base_rate": 0.02666666666666667,
+        "n_calls": 75,
+        "n_mentions": 2,
+        "source": "libfrog"
+      },
+      "China": {
+        "base_rate": 0.76,
+        "n_calls": 75,
+        "n_mentions": 57,
+        "source": "libfrog"
+      },
+      "Revenue": {
+        "base_rate": 0.9466666666666667,
+        "n_calls": 75,
+        "n_mentions": 71,
+        "source": "libfrog"
+      }
+    },
+    "RDDT": {
+      "AI": {
+        "base_rate": 1,
+        "n_calls": 8,
+        "n_mentions": 8,
+        "source": "libfrog"
+      },
+      "China": {
+        "base_rate": 0,
+        "n_calls": 8,
+        "n_mentions": 0,
+        "source": "libfrog"
+      },
+      "Revenue": {
+        "base_rate": 1,
+        "n_calls": 8,
+        "n_mentions": 8,
+        "source": "libfrog"
+      }
+    },
+    "PG": {
+      "AI": {
+        "base_rate": 0.05128205128205128,
+        "n_calls": 78,
+        "n_mentions": 4,
+        "source": "libfrog"
+      },
+      "China": {
+        "base_rate": 0.9743589743589743,
+        "n_calls": 78,
+        "n_mentions": 76,
+        "source": "libfrog"
+      },
+      "Revenue": {
+        "base_rate": 0.24358974358974358,
+        "n_calls": 78,
+        "n_mentions": 19,
+        "source": "libfrog"
+      }
+    },
+    "KO": {
+      "AI": {
+        "base_rate": 0.14285714285714285,
+        "n_calls": 77,
+        "n_mentions": 11,
+        "source": "libfrog"
+      },
+      "China": {
+        "base_rate": 1,
+        "n_calls": 77,
+        "n_mentions": 77,
+        "source": "libfrog"
+      },
+      "Revenue": {
+        "base_rate": 1,
+        "n_calls": 77,
+        "n_mentions": 77,
+        "source": "libfrog"
+      }
+    },
+    "GM": {
+      "AI": {
+        "base_rate": 0.07462686567164178,
+        "n_calls": 67,
+        "n_mentions": 5,
+        "source": "libfrog"
+      },
+      "China": {
+        "base_rate": 1,
+        "n_calls": 67,
+        "n_mentions": 67,
+        "source": "libfrog"
+      },
+      "Revenue": {
+        "base_rate": 0.9850746268656716,
+        "n_calls": 67,
+        "n_mentions": 66,
+        "source": "libfrog"
+      }
+    },
+    "ASTS": {
+      "AI": {
+        "base_rate": 0.1111111111111111,
+        "n_calls": 18,
+        "n_mentions": 2,
+        "source": "libfrog"
+      },
+      "China": {
+        "base_rate": 0.1111111111111111,
+        "n_calls": 18,
+        "n_mentions": 2,
+        "source": "libfrog"
+      },
+      "Revenue": {
+        "base_rate": 0.7777777777777778,
+        "n_calls": 18,
+        "n_mentions": 14,
+        "source": "libfrog"
+      }
+    },
+    "MSFT": {
+      "AI": {
+        "base_rate": 0.475,
+        "n_calls": 80,
+        "n_mentions": 38,
+        "source": "libfrog"
+      },
+      "Azure": {
+        "base_rate": 0.8375,
+        "n_calls": 80,
+        "n_mentions": 67,
+        "source": "libfrog"
+      },
+      "Copilot": {
+        "base_rate": 0.2,
+        "n_calls": 80,
+        "n_mentions": 16,
+        "source": "libfrog"
+      },
+      "OpenAI": {
+        "base_rate": 0.275,
+        "n_calls": 80,
+        "n_mentions": 22,
+        "source": "libfrog"
+      },
+      "Cloud": {
+        "base_rate": 0.825,
+        "n_calls": 80,
+        "n_mentions": 66,
+        "source": "libfrog"
+      },
+      "Gaming": {
+        "base_rate": 0.825,
+        "n_calls": 80,
+        "n_mentions": 66,
+        "source": "libfrog"
+      },
+      "LinkedIn": {
+        "base_rate": 0.4875,
+        "n_calls": 80,
+        "n_mentions": 39,
+        "source": "libfrog"
+      }
+    },
+    "LUCID": {
+      "AI": {
+        "base_rate": 0,
+        "n_calls": 0,
+        "n_mentions": 0,
+        "source": "libfrog"
+      },
+      "China": {
+        "base_rate": 0,
+        "n_calls": 0,
+        "n_mentions": 0,
+        "source": "libfrog"
+      },
+      "Revenue": {
+        "base_rate": 0,
+        "n_calls": 0,
+        "n_mentions": 0,
+        "source": "libfrog"
+      }
+    },
+    "MA": {
+      "AI": {
+        "base_rate": 0.3157894736842105,
+        "n_calls": 76,
+        "n_mentions": 24,
+        "source": "libfrog"
+      },
+      "China": {
+        "base_rate": 0.75,
+        "n_calls": 76,
+        "n_mentions": 57,
+        "source": "libfrog"
+      },
+      "Revenue": {
+        "base_rate": 0.9868421052631579,
+        "n_calls": 76,
+        "n_mentions": 75,
+        "source": "libfrog"
+      }
+    },
+    "HD": {
+      "AI": {
+        "base_rate": 0.075,
+        "n_calls": 80,
+        "n_mentions": 6,
+        "source": "libfrog"
+      },
+      "China": {
+        "base_rate": 0.3625,
+        "n_calls": 80,
+        "n_mentions": 29,
+        "source": "libfrog"
+      },
+      "Revenue": {
+        "base_rate": 0.15,
+        "n_calls": 80,
+        "n_mentions": 12,
+        "source": "libfrog"
+      }
+    },
+    "DELL": {
+      "AI": {
+        "base_rate": 0.26582278481012656,
+        "n_calls": 79,
+        "n_mentions": 21,
+        "source": "libfrog"
+      },
+      "China": {
+        "base_rate": 0.4936708860759494,
+        "n_calls": 79,
+        "n_mentions": 39,
+        "source": "libfrog"
+      },
+      "Revenue": {
+        "base_rate": 0.9873417721518988,
+        "n_calls": 79,
+        "n_mentions": 78,
+        "source": "libfrog"
+      }
+    },
+    "AAPL": {
+      "AI": {
+        "base_rate": 0.18518518518518517,
+        "n_calls": 81,
+        "n_mentions": 15,
+        "source": "libfrog"
+      },
+      "Artificial Intelligence": {
+        "base_rate": 0.07407407407407407,
+        "n_calls": 81,
+        "n_mentions": 6,
+        "source": "libfrog"
+      },
+      "iPhone": {
+        "base_rate": 0.9382716049382716,
+        "n_calls": 81,
+        "n_mentions": 76,
+        "source": "libfrog"
+      },
+      "China": {
+        "base_rate": 0.8888888888888888,
+        "n_calls": 81,
+        "n_mentions": 72,
+        "source": "libfrog"
+      },
+      "Services": {
+        "base_rate": 0.9506172839506173,
+        "n_calls": 81,
+        "n_mentions": 77,
+        "source": "libfrog"
+      },
+      "Mac": {
+        "base_rate": 0.9876543209876543,
+        "n_calls": 81,
+        "n_mentions": 80,
+        "source": "libfrog"
+      },
+      "iPad": {
+        "base_rate": 0.7901234567901234,
+        "n_calls": 81,
+        "n_mentions": 64,
+        "source": "libfrog"
+      },
+      "Vision Pro": {
+        "base_rate": 0.12345679012345678,
+        "n_calls": 81,
+        "n_mentions": 10,
+        "source": "libfrog"
+      },
+      "Apple Intelligence": {
+        "base_rate": 0.08641975308641975,
+        "n_calls": 81,
+        "n_mentions": 7,
+        "source": "libfrog"
+      }
+    },
+    "SHOP": {
+      "AI": {
+        "base_rate": 0.375,
+        "n_calls": 40,
+        "n_mentions": 15,
+        "source": "libfrog"
+      },
+      "China": {
+        "base_rate": 0.15,
+        "n_calls": 40,
+        "n_mentions": 6,
+        "source": "libfrog"
+      },
+      "Revenue": {
+        "base_rate": 0.975,
+        "n_calls": 40,
+        "n_mentions": 39,
+        "source": "libfrog"
+      }
+    },
+    "CHWY": {
+      "AI": {
+        "base_rate": 0.07407407407407407,
+        "n_calls": 27,
+        "n_mentions": 2,
+        "source": "libfrog"
+      },
+      "China": {
+        "base_rate": 0.037037037037037035,
+        "n_calls": 27,
+        "n_mentions": 1,
+        "source": "libfrog"
+      },
+      "Revenue": {
+        "base_rate": 0.9259259259259259,
+        "n_calls": 27,
+        "n_mentions": 25,
+        "source": "libfrog"
+      }
+    },
+    "SBUX": {
+      "AI": {
+        "base_rate": 0.1282051282051282,
+        "n_calls": 78,
+        "n_mentions": 10,
+        "source": "libfrog"
+      },
+      "China": {
+        "base_rate": 0.9615384615384616,
+        "n_calls": 78,
+        "n_mentions": 75,
+        "source": "libfrog"
+      },
+      "Revenue": {
+        "base_rate": 0.9871794871794872,
+        "n_calls": 78,
+        "n_mentions": 77,
+        "source": "libfrog"
+      }
+    },
+    "AZO": {
+      "AI": {
+        "base_rate": 0.012345679012345678,
+        "n_calls": 81,
+        "n_mentions": 1,
+        "source": "libfrog"
+      },
+      "China": {
+        "base_rate": 0.12345679012345678,
+        "n_calls": 81,
+        "n_mentions": 10,
+        "source": "libfrog"
+      },
+      "Revenue": {
+        "base_rate": 0.30864197530864196,
+        "n_calls": 81,
+        "n_mentions": 25,
+        "source": "libfrog"
+      }
+    },
+    "DIS": {
+      "AI": {
+        "base_rate": 0.056338028169014086,
+        "n_calls": 71,
+        "n_mentions": 4,
+        "source": "libfrog"
+      },
+      "China": {
+        "base_rate": 0.5211267605633803,
+        "n_calls": 71,
+        "n_mentions": 37,
+        "source": "libfrog"
+      },
+      "Revenue": {
+        "base_rate": 0.971830985915493,
+        "n_calls": 71,
+        "n_mentions": 69,
+        "source": "libfrog"
+      }
+    },
+    "SFM": {
+      "AI": {
+        "base_rate": 0,
+        "n_calls": 51,
+        "n_mentions": 0,
+        "source": "libfrog"
+      },
+      "China": {
+        "base_rate": 0.0196078431372549,
+        "n_calls": 51,
+        "n_mentions": 1,
+        "source": "libfrog"
+      },
+      "Revenue": {
+        "base_rate": 0.3137254901960784,
+        "n_calls": 51,
+        "n_mentions": 16,
+        "source": "libfrog"
+      }
+    },
+    "F": {
+      "AI": {
+        "base_rate": 0.26666666666666666,
+        "n_calls": 75,
+        "n_mentions": 20,
+        "source": "libfrog"
+      },
+      "China": {
+        "base_rate": 0.9333333333333333,
+        "n_calls": 75,
+        "n_mentions": 70,
+        "source": "libfrog"
+      },
+      "Revenue": {
+        "base_rate": 0.9466666666666667,
+        "n_calls": 75,
+        "n_mentions": 71,
+        "source": "libfrog"
+      }
+    },
+    "ROKU": {
+      "AI": {
+        "base_rate": 0.18181818181818182,
+        "n_calls": 33,
+        "n_mentions": 6,
+        "source": "libfrog"
+      },
+      "China": {
+        "base_rate": 0.12121212121212122,
+        "n_calls": 33,
+        "n_mentions": 4,
+        "source": "libfrog"
+      },
+      "Revenue": {
+        "base_rate": 1,
+        "n_calls": 33,
+        "n_mentions": 33,
+        "source": "libfrog"
+      }
+    },
+    "COST": {
+      "AI": {
+        "base_rate": 0.02531645569620253,
+        "n_calls": 79,
+        "n_mentions": 2,
+        "source": "libfrog"
+      },
+      "China": {
+        "base_rate": 0.4177215189873418,
+        "n_calls": 79,
+        "n_mentions": 33,
+        "source": "libfrog"
+      },
+      "Revenue": {
+        "base_rate": 0.3037974683544304,
+        "n_calls": 79,
+        "n_mentions": 24,
+        "source": "libfrog"
+      }
+    },
+    "NVDA": {
+      "AI": {
+        "base_rate": 0.5256410256410257,
+        "n_calls": 78,
+        "n_mentions": 41,
+        "source": "libfrog"
+      },
+      "Artificial Intelligence": {
+        "base_rate": 0.4230769230769231,
+        "n_calls": 78,
+        "n_mentions": 33,
+        "source": "libfrog"
+      },
+      "GPU": {
+        "base_rate": 0.9871794871794872,
+        "n_calls": 78,
+        "n_mentions": 77,
+        "source": "libfrog"
+      },
+      "Data Center": {
+        "base_rate": 0.6025641025641025,
+        "n_calls": 78,
+        "n_mentions": 47,
+        "source": "libfrog"
+      },
+      "China": {
+        "base_rate": 0.717948717948718,
+        "n_calls": 78,
+        "n_mentions": 56,
+        "source": "libfrog"
+      },
+      "Blackwell": {
+        "base_rate": 0.08974358974358974,
+        "n_calls": 78,
+        "n_mentions": 7,
+        "source": "libfrog"
+      },
+      "Gaming": {
+        "base_rate": 0.9102564102564102,
+        "n_calls": 78,
+        "n_mentions": 71,
+        "source": "libfrog"
+      },
+      "Automotive": {
+        "base_rate": 0.6923076923076923,
+        "n_calls": 78,
+        "n_mentions": 54,
+        "source": "libfrog"
+      }
+    },
+    "RY": {
+      "AI": {
+        "base_rate": 0.375,
+        "n_calls": 56,
+        "n_mentions": 21,
+        "source": "libfrog"
+      },
+      "China": {
+        "base_rate": 0.17857142857142858,
+        "n_calls": 56,
+        "n_mentions": 10,
+        "source": "libfrog"
+      },
+      "Revenue": {
+        "base_rate": 0.9821428571428571,
+        "n_calls": 56,
+        "n_mentions": 55,
+        "source": "libfrog"
+      }
+    },
+    "CBRL": {
+      "AI": {
+        "base_rate": 0.046875,
+        "n_calls": 64,
+        "n_mentions": 3,
+        "source": "libfrog"
+      },
+      "China": {
+        "base_rate": 0.0625,
+        "n_calls": 64,
+        "n_mentions": 4,
+        "source": "libfrog"
+      },
+      "Revenue": {
+        "base_rate": 0.96875,
+        "n_calls": 64,
+        "n_mentions": 62,
+        "source": "libfrog"
+      }
+    },
+    "ORCL": {
+      "AI": {
+        "base_rate": 0.2692307692307692,
+        "n_calls": 78,
+        "n_mentions": 21,
+        "source": "libfrog"
+      },
+      "China": {
+        "base_rate": 0.24358974358974358,
+        "n_calls": 78,
+        "n_mentions": 19,
+        "source": "libfrog"
+      },
+      "Revenue": {
+        "base_rate": 1,
+        "n_calls": 78,
+        "n_mentions": 78,
+        "source": "libfrog"
+      }
+    },
+    "SPOT": {
+      "AI": {
+        "base_rate": 0.3125,
+        "n_calls": 32,
+        "n_mentions": 10,
+        "source": "libfrog"
+      },
+      "China": {
+        "base_rate": 0.15625,
+        "n_calls": 32,
+        "n_mentions": 5,
+        "source": "libfrog"
+      },
+      "Revenue": {
+        "base_rate": 1,
+        "n_calls": 32,
+        "n_mentions": 32,
+        "source": "libfrog"
+      }
+    },
+    "MRVL": {
+      "AI": {
+        "base_rate": 0.32,
+        "n_calls": 75,
+        "n_mentions": 24,
+        "source": "libfrog"
+      },
+      "China": {
+        "base_rate": 0.56,
+        "n_calls": 75,
+        "n_mentions": 42,
+        "source": "libfrog"
+      },
+      "Revenue": {
+        "base_rate": 0.96,
+        "n_calls": 75,
+        "n_mentions": 72,
+        "source": "libfrog"
+      }
+    },
+    "VSCO": {
+      "AI": {
+        "base_rate": 0.23529411764705882,
+        "n_calls": 17,
+        "n_mentions": 4,
+        "source": "libfrog"
+      },
+      "China": {
+        "base_rate": 0.9411764705882353,
+        "n_calls": 17,
+        "n_mentions": 16,
+        "source": "libfrog"
+      },
+      "Revenue": {
+        "base_rate": 0.23529411764705882,
+        "n_calls": 17,
+        "n_mentions": 4,
+        "source": "libfrog"
+      }
+    },
+    "CAVA": {
+      "AI": {
+        "base_rate": 0.6363636363636364,
+        "n_calls": 11,
+        "n_mentions": 7,
+        "source": "libfrog"
+      },
+      "China": {
+        "base_rate": 0,
+        "n_calls": 11,
+        "n_mentions": 0,
+        "source": "libfrog"
+      },
+      "Revenue": {
+        "base_rate": 1,
+        "n_calls": 11,
+        "n_mentions": 11,
+        "source": "libfrog"
+      }
+    },
+    "KR": {
+      "AI": {
+        "base_rate": 0.1111111111111111,
+        "n_calls": 72,
+        "n_mentions": 8,
+        "source": "libfrog"
+      },
+      "China": {
+        "base_rate": 0.06944444444444445,
+        "n_calls": 72,
+        "n_mentions": 5,
+        "source": "libfrog"
+      },
+      "Revenue": {
+        "base_rate": 0.2916666666666667,
+        "n_calls": 72,
+        "n_mentions": 21,
+        "source": "libfrog"
+      }
+    },
+    "HOOD": {
+      "AI": {
+        "base_rate": 0.4444444444444444,
+        "n_calls": 18,
+        "n_mentions": 8,
+        "source": "libfrog"
+      },
+      "China": {
+        "base_rate": 0,
+        "n_calls": 18,
+        "n_mentions": 0,
+        "source": "libfrog"
+      },
+      "Revenue": {
+        "base_rate": 1,
+        "n_calls": 18,
+        "n_mentions": 18,
+        "source": "libfrog"
+      }
+    },
+    "AMC": {
+      "AI": {
+        "base_rate": 0.06382978723404255,
+        "n_calls": 47,
+        "n_mentions": 3,
+        "source": "libfrog"
+      },
+      "China": {
+        "base_rate": 0.14893617021276595,
+        "n_calls": 47,
+        "n_mentions": 7,
+        "source": "libfrog"
+      },
+      "Revenue": {
+        "base_rate": 1,
+        "n_calls": 47,
+        "n_mentions": 47,
+        "source": "libfrog"
+      }
+    },
+    "DEER": {
+      "AI": {
+        "base_rate": 0,
+        "n_calls": 0,
+        "n_mentions": 0,
+        "source": "libfrog"
+      },
+      "China": {
+        "base_rate": 0,
+        "n_calls": 0,
+        "n_mentions": 0,
+        "source": "libfrog"
+      },
+      "Revenue": {
+        "base_rate": 0,
+        "n_calls": 0,
+        "n_mentions": 0,
+        "source": "libfrog"
+      }
+    },
+    "VZ": {
+      "AI": {
+        "base_rate": 0.1375,
+        "n_calls": 80,
+        "n_mentions": 11,
+        "source": "libfrog"
+      },
+      "China": {
+        "base_rate": 0.025,
+        "n_calls": 80,
+        "n_mentions": 2,
+        "source": "libfrog"
+      },
+      "Revenue": {
+        "base_rate": 0.975,
+        "n_calls": 80,
+        "n_mentions": 78,
+        "source": "libfrog"
+      }
+    },
+    "ULTA": {
+      "AI": {
+        "base_rate": 0.18181818181818182,
+        "n_calls": 66,
+        "n_mentions": 12,
+        "source": "libfrog"
+      },
+      "China": {
+        "base_rate": 0.030303030303030304,
+        "n_calls": 66,
+        "n_mentions": 2,
+        "source": "libfrog"
+      },
+      "Revenue": {
+        "base_rate": 0.4090909090909091,
+        "n_calls": 66,
+        "n_mentions": 27,
+        "source": "libfrog"
+      }
+    },
+    "FDX": {
+      "AI": {
+        "base_rate": 0.15714285714285714,
+        "n_calls": 70,
+        "n_mentions": 11,
+        "source": "libfrog"
+      },
+      "China": {
+        "base_rate": 0.7142857142857143,
+        "n_calls": 70,
+        "n_mentions": 50,
+        "source": "libfrog"
+      },
+      "Revenue": {
+        "base_rate": 1,
+        "n_calls": 70,
+        "n_mentions": 70,
+        "source": "libfrog"
+      }
+    },
+    "WEN": {
+      "AI": {
+        "base_rate": 0.09859154929577464,
+        "n_calls": 71,
+        "n_mentions": 7,
+        "source": "libfrog"
+      },
+      "China": {
+        "base_rate": 0.07042253521126761,
+        "n_calls": 71,
+        "n_mentions": 5,
+        "source": "libfrog"
+      },
+      "Revenue": {
+        "base_rate": 0.7605633802816901,
+        "n_calls": 71,
+        "n_mentions": 54,
+        "source": "libfrog"
+      }
+    },
+    "AXP": {
+      "AI": {
+        "base_rate": 0.04,
+        "n_calls": 75,
+        "n_mentions": 3,
+        "source": "libfrog"
+      },
+      "China": {
+        "base_rate": 0.4,
+        "n_calls": 75,
+        "n_mentions": 30,
+        "source": "libfrog"
+      },
+      "Revenue": {
+        "base_rate": 1,
+        "n_calls": 75,
+        "n_mentions": 75,
+        "source": "libfrog"
+      }
+    },
+    "MCD": {
+      "AI": {
+        "base_rate": 0.038461538461538464,
+        "n_calls": 78,
+        "n_mentions": 3,
+        "source": "libfrog"
+      },
+      "China": {
+        "base_rate": 0.9871794871794872,
+        "n_calls": 78,
+        "n_mentions": 77,
+        "source": "libfrog"
+      },
+      "Revenue": {
+        "base_rate": 0.3974358974358974,
+        "n_calls": 78,
+        "n_mentions": 31,
+        "source": "libfrog"
+      }
+    }
+  },
+  "summary": {
+    "n_companies": 113,
+    "n_pairs": 372,
+    "api_key_set": true,
+    "fetched_at": "2026-03-07T21:33:06.954621"
+  }
+}

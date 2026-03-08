@@ -12,3 +12,4 @@ output/full_*/
 output/*.pkl
 *.pkl
 .DS_Store
+data/real_markets/_pm_events_cache.json
