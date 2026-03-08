@@ -8,6 +8,7 @@ build/
 data/transcripts/
 data/entities/
 data/markets/
-output/
+output/full_*/
+output/*.pkl
 *.pkl
 .DS_Store
