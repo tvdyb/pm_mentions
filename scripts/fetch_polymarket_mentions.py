@@ -83,11 +83,20 @@ def fetch_mention_events() -> list[dict]:
     return all_events
 
 
-def extract_markets(events: list[dict]) -> list[dict]:
-    """Extract individual markets from events with prices."""
-    markets = []
+def extract_markets(events: list[dict], skip_clob: bool = False) -> list[dict]:
+    """Extract individual markets from events with prices.
 
-    for event in events:
+    If skip_clob=True, skip slow CLOB price history lookups and only use
+    metadata-based prices. Markets without opening prices are still included
+    (opening_price=None) for resolution data.
+    """
+    markets = []
+    n_resolved = 0
+
+    for ei, event in enumerate(events):
+        if ei % 100 == 0 and ei > 0:
+            sys.stdout.write(f"\r  Processed {ei}/{len(events)} events, {n_resolved} resolved markets")
+            sys.stdout.flush()
         event_title = event.get("title", "")
         event_id = event.get("id", "")
         end_date = event.get("endDate", "")
@@ -150,34 +159,35 @@ def extract_markets(events: list[dict]) -> list[dict]:
                 yes_price = None
 
             # For settled markets, outcomePrices will be 1/0.
-            # We need historical price. Try CLOB price history.
+            # We need historical price. Try CLOB price history (slow).
             opening_price = None
-            tokens = mkt.get("clobTokenIds")
-            if tokens:
-                try:
-                    token_list = json.loads(tokens) if isinstance(tokens, str) else tokens
-                    if isinstance(token_list, list) and len(token_list) >= 1:
-                        time.sleep(DELAY)
-                        hist = clob_get("/prices-history", {
-                            "market": token_list[0],
-                            "interval": "max",
-                            "fidelity": 60,
-                        })
-                        if hist and isinstance(hist, dict):
-                            history = hist.get("history", [])
-                            if history:
-                                # Get price from early in the market's life
-                                # Sort by timestamp, take first quartile average
-                                prices_sorted = sorted(history, key=lambda h: h.get("t", 0))
-                                n = len(prices_sorted)
-                                early = prices_sorted[:max(1, n // 4)]
-                                opening_price = sum(float(p.get("p", 0)) for p in early) / len(early)
-                except (json.JSONDecodeError, TypeError, ValueError):
-                    pass
+            if not skip_clob:
+                tokens = mkt.get("clobTokenIds")
+                if tokens:
+                    try:
+                        token_list = json.loads(tokens) if isinstance(tokens, str) else tokens
+                        if isinstance(token_list, list) and len(token_list) >= 1:
+                            time.sleep(DELAY)
+                            hist = clob_get("/prices-history", {
+                                "market": token_list[0],
+                                "interval": "max",
+                                "fidelity": 60,
+                            })
+                            if hist and isinstance(hist, dict):
+                                history = hist.get("history", [])
+                                if history:
+                                    prices_sorted = sorted(history, key=lambda h: h.get("t", 0))
+                                    n = len(prices_sorted)
+                                    early = prices_sorted[:max(1, n // 4)]
+                                    opening_price = sum(float(p.get("p", 0)) for p in early) / len(early)
+                    except (json.JSONDecodeError, TypeError, ValueError):
+                        pass
 
             # Fall back to outcomePrices if no history
             if opening_price is None and yes_price is not None and yes_price not in (0, 1):
                 opening_price = yes_price
+
+            n_resolved += 1
 
             markets.append({
                 "source": "polymarket",
@@ -215,8 +225,8 @@ def main():
             json.dump(events, f)
         print(f"  Cached {len(events)} events")
 
-    print("\n[2/2] Extracting markets with prices...")
-    markets = extract_markets(events)
+    print("\n[2/2] Extracting markets (skip_clob=True for speed)...")
+    markets = extract_markets(events, skip_clob=True)
 
     # Filter to those with usable prices
     with_price = [m for m in markets if m.get("opening_price") is not None
