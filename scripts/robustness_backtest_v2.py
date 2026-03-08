@@ -31,6 +31,7 @@ KALSHI_EXPANDED = Path("data/real_markets/kalshi_all_series.json")
 KALSHI_ORIGINAL = Path("data/real_markets/real_data_combined.json")
 PM_PATH = Path("data/real_markets/polymarket_all_mentions.json")
 LIBFROG_PATH = Path("data/base_rates/libfrog_earnings.json")
+LIBFROG_MATCHED_PATH = Path("data/base_rates/libfrog_kalshi_matched.json")
 OUT_DIR = Path("output/backtest_v2")
 OUT_DIR.mkdir(parents=True, exist_ok=True)
 
@@ -220,12 +221,29 @@ def load_data() -> list[dict]:
 
 
 def load_libfrog() -> dict:
-    """Load LibFrog earnings base rates."""
-    if not LIBFROG_PATH.exists():
-        return {}
-    with open(LIBFROG_PATH) as f:
-        raw = json.load(f)
-    return raw.get("companies", {})
+    """Load LibFrog earnings base rates.
+
+    Returns dict keyed by "COMPANY|kalshi_word" -> {base_rate, n_calls, ...}
+    Prefers the matched file (per-word queries), falls back to generic.
+    """
+    matched = {}
+
+    # 1. Load per-word matched data (highest quality)
+    if LIBFROG_MATCHED_PATH.exists():
+        with open(LIBFROG_MATCHED_PATH) as f:
+            raw = json.load(f)
+        for key, val in raw.get("matches", {}).items():
+            if val.get("base_rate") is not None:
+                matched[key] = val
+
+    # 2. Load generic company data as fallback
+    generic = {}
+    if LIBFROG_PATH.exists():
+        with open(LIBFROG_PATH) as f:
+            raw = json.load(f)
+        generic = raw.get("companies", {})
+
+    return {"matched": matched, "generic": generic}
 
 
 # ---------------------------------------------------------------------------
@@ -669,54 +687,145 @@ def capacity_analysis(markets: list[dict]) -> dict:
     }
 
 
+def _extract_company(series: str) -> str:
+    """Extract company ticker from Kalshi earnings series."""
+    return (series.replace("KXEARNINGSMENTION", "")
+                  .replace("KXEARNIGSMENTION", "")
+                  .replace("KXEARNIGNSMENTIO", "")
+                  .upper())
+
+
+def _libfrog_lookup(libfrog: dict, company: str, word: str) -> tuple[float | None, int]:
+    """Look up LibFrog base rate for a (company, word) pair.
+
+    Returns (base_rate, n_calls). Tries:
+    1. Direct matched key "COMPANY|word"
+    2. Fuzzy: try each "/" alternative
+    3. Generic company data (case-insensitive word match)
+    """
+    matched = libfrog.get("matched", {})
+    generic = libfrog.get("generic", {})
+
+    # 1. Direct match
+    key = f"{company}|{word}"
+    if key in matched:
+        return matched[key].get("base_rate"), matched[key].get("n_calls", 0)
+
+    # 2. Try "/" alternatives
+    if " / " in word:
+        for part in word.split(" / "):
+            part = part.strip()
+            key2 = f"{company}|{part}"
+            # Check if any matched key contains this part as the kalshi_word
+            for mk, mv in matched.items():
+                if mk.startswith(f"{company}|") and mv.get("kalshi_word") == word:
+                    if mv.get("base_rate") is not None:
+                        return mv["base_rate"], mv.get("n_calls", 0)
+
+    # 3. Generic fallback (case-insensitive)
+    if company in generic:
+        for lf_word, lf_data in generic[company].items():
+            if lf_word.lower() == word.lower():
+                return lf_data.get("base_rate"), lf_data.get("n_calls", 0)
+            # Try matching first part of "/" word
+            if " / " in word:
+                for part in word.split(" / "):
+                    if lf_word.lower() == part.strip().lower():
+                        return lf_data.get("base_rate"), lf_data.get("n_calls", 0)
+
+    return None, 0
+
+
 def libfrog_comparison(markets: list[dict], libfrog: dict) -> dict:
-    """Compare Kalshi earnings prices with LibFrog transcript base rates."""
+    """Compare Kalshi earnings prices with LibFrog transcript base rates.
+
+    For each matched market, compute: price vs base rate, outcome,
+    and PnL of a NO trade using LibFrog as signal.
+    """
     matches = []
     earnings = [m for m in markets if m["category"] == "earnings_word"]
 
     for m in earnings:
-        series = m["series"]
-        # Extract company ticker from series: KXEARNINGSMENTIONAAPL -> AAPL
-        company = series.replace("KXEARNINGSMENTION", "").upper()
+        company = _extract_company(m["series"])
         word = m["word"]
 
-        if company not in libfrog:
-            continue
-
-        # Try exact match, then case-insensitive
-        lf_company = libfrog[company]
-        lf_rate = None
-        for lf_word, lf_data in lf_company.items():
-            if lf_word.lower() == word.lower():
-                lf_rate = lf_data.get("base_rate")
-                break
-
+        lf_rate, n_calls = _libfrog_lookup(libfrog, company, word)
         if lf_rate is None:
             continue
+
+        # PnL of buying NO using LibFrog rate as signal
+        # Signal: if LibFrog rate < kalshi price, buy NO (market overprices YES)
+        overpricing = m["mid"] - lf_rate
+        pnl = _no_pnl(m["mid"], m["outcome"], DEFAULT_SLIPPAGE, m["source"])
 
         matches.append({
             "company": company,
             "word": word,
             "kalshi_mid": m["mid"],
             "libfrog_rate": lf_rate,
+            "n_calls": n_calls,
+            "low_confidence": n_calls < 10,
             "kalshi_outcome": m["outcome"],
-            "overpricing": m["mid"] - lf_rate,
+            "overpricing": overpricing,
+            "no_pnl_net": pnl["net"],
+            "signal_buy_no": lf_rate < m["mid"] - 0.05,  # buy NO if >5c edge
         })
 
     if not matches:
         return {"n_matches": 0}
 
     overpricings = [m["overpricing"] for m in matches]
-    return {
+    pnls_all = [m["no_pnl_net"] for m in matches]
+
+    # Signal-filtered PnL: only trade when LibFrog says buy NO
+    signal_trades = [m for m in matches if m["signal_buy_no"]]
+    signal_pnls = [m["no_pnl_net"] for m in signal_trades]
+
+    # High-confidence only (n_calls >= 10)
+    hc_trades = [m for m in signal_trades if not m["low_confidence"]]
+    hc_pnls = [m["no_pnl_net"] for m in hc_trades]
+
+    result = {
         "n_matches": len(matches),
+        "n_earnings_total": len(earnings),
+        "match_rate": len(matches) / len(earnings) if earnings else 0,
         "avg_overpricing": float(np.mean(overpricings)),
         "median_overpricing": float(np.median(overpricings)),
-        "std_overpricing": float(np.std(overpricings, ddof=1)) if len(overpricings) > 1 else 0,
-        "n_overpriced": sum(1 for o in overpricings if o > 0),
         "pct_overpriced": float(np.mean([1 if o > 0 else 0 for o in overpricings])),
+        "n_low_confidence": sum(1 for m in matches if m["low_confidence"]),
+        # Blind NO on all matched
+        "blind_no_n": len(pnls_all),
+        "blind_no_mean": float(np.mean(pnls_all)),
+        "blind_no_total": float(np.sum(pnls_all)),
+        "blind_no_wr": float(np.mean([1 if p > 0 else 0 for p in pnls_all])),
+        # Signal-filtered (buy NO when LibFrog edge > 5c)
+        "signal_n": len(signal_trades),
+        "signal_mean": float(np.mean(signal_pnls)) if signal_pnls else 0,
+        "signal_total": float(np.sum(signal_pnls)) if signal_pnls else 0,
+        "signal_wr": float(np.mean([1 if p > 0 else 0 for p in signal_pnls])) if signal_pnls else 0,
+        # High-confidence signal
+        "hc_signal_n": len(hc_trades),
+        "hc_signal_mean": float(np.mean(hc_pnls)) if hc_pnls else 0,
+        "hc_signal_total": float(np.sum(hc_pnls)) if hc_pnls else 0,
+        "hc_signal_wr": float(np.mean([1 if p > 0 else 0 for p in hc_pnls])) if hc_pnls else 0,
         "matches": sorted(matches, key=lambda x: abs(x["overpricing"]),
-                         reverse=True)[:20],
+                         reverse=True)[:30],
     }
+
+    # Bootstrap CI on signal-filtered PnL
+    if len(signal_pnls) >= 20:
+        boot = bootstrap_ci(np.array(signal_pnls))
+        result["signal_boot_ci_lo"] = boot["ci_lo"]
+        result["signal_boot_ci_hi"] = boot["ci_hi"]
+        result["signal_boot_excl_zero"] = boot["ci_excludes_zero"]
+
+    if len(hc_pnls) >= 20:
+        boot = bootstrap_ci(np.array(hc_pnls))
+        result["hc_boot_ci_lo"] = boot["ci_lo"]
+        result["hc_boot_ci_hi"] = boot["ci_hi"]
+        result["hc_boot_excl_zero"] = boot["ci_excludes_zero"]
+
+    return result
 
 
 # ---------------------------------------------------------------------------
@@ -1175,23 +1284,66 @@ def generate_report(markets, expanding, ttest, stability, calibration,
     if libfrog_comp.get("n_matches", 0) > 0:
         w("## 9. LibFrog transcript base rate comparison")
         w("")
-        w(f"Matched {libfrog_comp['n_matches']} earnings markets against "
+        w(f"Matched {libfrog_comp['n_matches']}/{libfrog_comp.get('n_earnings_total', '?')} "
+          f"earnings markets ({libfrog_comp.get('match_rate', 0):.0%}) against "
           f"LibFrog historical transcript data.")
+        if libfrog_comp.get("n_low_confidence", 0) > 0:
+            w(f"**{libfrog_comp['n_low_confidence']} matches have <10 transcript calls "
+              f"(low confidence).**")
+        w("")
+
+        w("### Overpricing summary")
         w("")
         w(f"| Metric | Value |")
         w(f"|--------|-------|")
-        w(f"| Matches | {libfrog_comp['n_matches']} |")
+        w(f"| Matched markets | {libfrog_comp['n_matches']} |")
         w(f"| Avg overpricing (Kalshi - LibFrog) | {libfrog_comp['avg_overpricing']:+.3f} |")
         w(f"| Median overpricing | {libfrog_comp['median_overpricing']:+.3f} |")
         w(f"| % overpriced | {libfrog_comp['pct_overpriced']:.0%} |")
         w("")
+
+        w("### Is transcript data alpha? PnL analysis")
+        w("")
+        w("| Strategy | N | mu(net) | Total | WR | CI |")
+        w("|----------|--:|-------:|------:|---:|---:|")
+        w(f"| Blind NO (all matched) | {libfrog_comp['blind_no_n']} | "
+          f"{libfrog_comp['blind_no_mean']:+.4f} | "
+          f"{libfrog_comp['blind_no_total']:+.1f} | "
+          f"{libfrog_comp['blind_no_wr']:.0%} | - |")
+        if libfrog_comp.get("signal_n", 0) > 0:
+            ci_str = ""
+            if "signal_boot_ci_lo" in libfrog_comp:
+                ci_str = (f"[{libfrog_comp['signal_boot_ci_lo']:+.3f}, "
+                          f"{libfrog_comp['signal_boot_ci_hi']:+.3f}]")
+                if libfrog_comp.get("signal_boot_excl_zero"):
+                    ci_str += " **excl 0**"
+            w(f"| LibFrog signal (edge>5c) | {libfrog_comp['signal_n']} | "
+              f"{libfrog_comp['signal_mean']:+.4f} | "
+              f"{libfrog_comp['signal_total']:+.1f} | "
+              f"{libfrog_comp['signal_wr']:.0%} | {ci_str} |")
+        if libfrog_comp.get("hc_signal_n", 0) > 0:
+            ci_str = ""
+            if "hc_boot_ci_lo" in libfrog_comp:
+                ci_str = (f"[{libfrog_comp['hc_boot_ci_lo']:+.3f}, "
+                          f"{libfrog_comp['hc_boot_ci_hi']:+.3f}]")
+                if libfrog_comp.get("hc_boot_excl_zero"):
+                    ci_str += " **excl 0**"
+            w(f"| HC signal (n_calls>=10) | {libfrog_comp['hc_signal_n']} | "
+              f"{libfrog_comp['hc_signal_mean']:+.4f} | "
+              f"{libfrog_comp['hc_signal_total']:+.1f} | "
+              f"{libfrog_comp['hc_signal_wr']:.0%} | {ci_str} |")
+        w("")
+
         w("### Top overpriced/underpriced (by magnitude)")
         w("")
-        w("| Company | Word | Kalshi | LibFrog | Delta |")
-        w("|---------|------|------:|-------:|------:|")
-        for m in libfrog_comp["matches"][:15]:
+        w("| Company | Word | Kalshi | LibFrog | Delta | n_calls | Outcome | NO PnL |")
+        w("|---------|------|------:|-------:|------:|--------:|:-------:|------:|")
+        for m in libfrog_comp["matches"][:20]:
+            outcome_str = "YES" if m["kalshi_outcome"] == 1 else "NO"
+            lc = "*" if m.get("low_confidence") else ""
             w(f"| {m['company']} | {m['word']} | {m['kalshi_mid']:.3f} | "
-              f"{m['libfrog_rate']:.3f} | {m['overpricing']:+.3f} |")
+              f"{m['libfrog_rate']:.3f} | {m['overpricing']:+.3f} | "
+              f"{m['n_calls']}{lc} | {outcome_str} | {m['no_pnl_net']:+.3f} |")
         w("")
 
     # ── Capacity ──
@@ -1434,9 +1586,26 @@ def main():
     print("\n[9/9] LibFrog transcript comparison...")
     lf_comp = libfrog_comparison(markets, libfrog)
     if lf_comp["n_matches"] > 0:
-        print(f"  {lf_comp['n_matches']} matches found")
+        n_e = lf_comp.get("n_earnings_total", "?")
+        print(f"  {lf_comp['n_matches']}/{n_e} earnings markets matched "
+              f"({lf_comp.get('match_rate', 0):.0%})")
         print(f"  Avg overpricing: {lf_comp['avg_overpricing']:+.3f}")
         print(f"  % overpriced: {lf_comp['pct_overpriced']:.0%}")
+        print(f"  Low confidence (n_calls<10): {lf_comp.get('n_low_confidence', 0)}")
+        print(f"  Blind NO on matched: mu={lf_comp['blind_no_mean']:+.4f}, "
+              f"WR={lf_comp['blind_no_wr']:.0%}")
+        if lf_comp.get("signal_n", 0) > 0:
+            print(f"  LibFrog signal (edge>5c): n={lf_comp['signal_n']}, "
+                  f"mu={lf_comp['signal_mean']:+.4f}, "
+                  f"WR={lf_comp['signal_wr']:.0%}")
+            if "signal_boot_ci_lo" in lf_comp:
+                excl = "YES" if lf_comp.get("signal_boot_excl_zero") else "NO"
+                print(f"    Bootstrap CI: [{lf_comp['signal_boot_ci_lo']:+.4f}, "
+                      f"{lf_comp['signal_boot_ci_hi']:+.4f}] excl zero: {excl}")
+        if lf_comp.get("hc_signal_n", 0) > 0:
+            print(f"  HC signal (n>=10): n={lf_comp['hc_signal_n']}, "
+                  f"mu={lf_comp['hc_signal_mean']:+.4f}, "
+                  f"WR={lf_comp['hc_signal_wr']:.0%}")
     else:
         print("  No LibFrog matches found")
 

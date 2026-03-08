@@ -1,6 +1,6 @@
 # Mention Market Systematic NO — Expanded Robustness Report
 
-Generated 2026-03-08 00:07 · 20,840 settled markets (20194 Kalshi, 646 Polymarket) · 205 series · 5 categories
+Generated 2026-03-08 18:23 · 20,840 settled markets (20194 Kalshi, 646 Polymarket) · 205 series · 5 categories
 
 ---
 
@@ -537,34 +537,50 @@ chi2(9) = 381.3, p < 0.001
 
 ## 9. LibFrog transcript base rate comparison
 
-Matched 122 earnings markets against LibFrog historical transcript data.
+Matched 2062/2177 earnings markets (95%) against LibFrog historical transcript data.
+**59 matches have <10 transcript calls (low confidence).**
+
+### Overpricing summary
 
 | Metric | Value |
 |--------|-------|
-| Matches | 122 |
-| Avg overpricing (Kalshi - LibFrog) | +0.244 |
-| Median overpricing | +0.148 |
-| % overpriced | 70% |
+| Matched markets | 2062 |
+| Avg overpricing (Kalshi - LibFrog) | +0.251 |
+| Median overpricing | +0.132 |
+| % overpriced | 67% |
+
+### Is transcript data alpha? PnL analysis
+
+| Strategy | N | mu(net) | Total | WR | CI |
+|----------|--:|-------:|------:|---:|---:|
+| Blind NO (all matched) | 2062 | -0.0183 | -37.7 | 16% | - |
+| LibFrog signal (edge>5c) | 1183 | -0.0230 | -27.2 | 16% | [-0.032, -0.014] |
+| HC signal (n_calls>=10) | 1154 | -0.0233 | -26.9 | 16% | [-0.033, -0.014] |
 
 ### Top overpriced/underpriced (by magnitude)
 
-| Company | Word | Kalshi | LibFrog | Delta |
-|---------|------|------:|-------:|------:|
-| TSMC | China | 0.980 | 0.000 | +0.980 |
-| NVDA | Blackwell | 0.990 | 0.090 | +0.900 |
-| NVDA | Blackwell | 0.990 | 0.090 | +0.900 |
-| AAPL | Apple Intelligence | 0.950 | 0.086 | +0.864 |
-| AAPL | Apple Intelligence | 0.950 | 0.086 | +0.864 |
-| GOOGL | Gemini | 0.990 | 0.134 | +0.856 |
-| HD | Revenue | 0.990 | 0.150 | +0.840 |
-| GOOGL | Gemini | 0.940 | 0.134 | +0.806 |
-| MSFT | Copilot | 0.990 | 0.200 | +0.790 |
-| AAPL | Vision Pro | 0.910 | 0.123 | +0.787 |
-| META | Llama | 0.990 | 0.208 | +0.782 |
-| MSFT | Copilot | 0.970 | 0.200 | +0.770 |
-| TSLA | Optimus | 0.990 | 0.254 | +0.736 |
-| META | Threads | 0.990 | 0.264 | +0.726 |
-| TSLA | Optimus | 0.980 | 0.254 | +0.726 |
+| Company | Word | Kalshi | LibFrog | Delta | n_calls | Outcome | NO PnL |
+|---------|------|------:|-------:|------:|--------:|:-------:|------:|
+| CRCL | Acceleration | 0.990 | 0.000 | +0.990 | 1* | YES | -0.040 |
+| CRCL | Polymarket | 0.990 | 0.000 | +0.990 | 1* | YES | -0.040 |
+| CRCL | M&A / Merger | 0.010 | 1.000 | -0.990 | 1* | NO | -0.010 |
+| CRCL | Treasury | 0.010 | 1.000 | -0.990 | 1* | NO | -0.010 |
+| CRCL | Fintech | 0.990 | 0.000 | +0.990 | 1* | YES | -0.040 |
+| RDDT | OpenAI / Open AI | 0.990 | 0.000 | +0.990 | 8* | YES | -0.040 |
+| MA | Rate Cap / 10% Cap | 0.990 | 0.000 | +0.990 | 76 | YES | -0.040 |
+| AMZN | Gen-AI / Generative AI | 0.990 | 0.000 | +0.990 | 81 | YES | -0.040 |
+| ACI | SNAP / Food Stamp | 0.990 | 0.000 | +0.990 | 18 | YES | -0.040 |
+| DPZ | DoorDash (5+ times) | 0.990 | 0.000 | +0.990 | 64 | YES | -0.040 |
+| PLTR | Warp Speed | 0.990 | 0.000 | +0.990 | 22 | YES | -0.040 |
+| PLTR | Warp Speed | 0.990 | 0.000 | +0.990 | 22 | YES | -0.040 |
+| SBUX | Non Dairy | 0.990 | 0.000 | +0.990 | 78 | YES | -0.040 |
+| NVDA | Export restriction | 0.990 | 0.000 | +0.990 | 78 | YES | -0.040 |
+| NVDA | Generative AI / Gen AI / Gen-AI | 0.990 | 0.000 | +0.990 | 78 | YES | -0.040 |
+| AMD | Export restriction | 0.990 | 0.000 | +0.990 | 75 | YES | -0.040 |
+| MCD | Tariff | 0.990 | 0.000 | +0.990 | 78 | YES | -0.040 |
+| BLK | ETF inflow | 0.990 | 0.000 | +0.990 | 71 | YES | -0.040 |
+| HOOD | SIG / Susquehanna | 0.990 | 0.000 | +0.990 | 18 | YES | -0.040 |
+| HOOD | Prediction Market | 0.990 | 0.000 | +0.990 | 18 | YES | -0.040 |
 
 ## 10. Capacity analysis
 

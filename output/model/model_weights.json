@@ -1,0 +1,24 @@
+{
+  "weights": [
+    0.04394827560162146,
+    0.03312011224604257,
+    0.23820905119191416,
+    0.015011771731774365,
+    -0.011864809570343032,
+    0.006983381927650076,
+    0.012899616372207604
+  ],
+  "bias": -0.6809807722983975,
+  "feature_names": [
+    "series_base_rate",
+    "word_base_rate",
+    "opening_price",
+    "log_volume_norm",
+    "n_history_norm",
+    "series_age_norm",
+    "libfrog_rate"
+  ],
+  "edge_threshold": 0.1,
+  "trained_at": "2026-03-08T18:25:19.012220",
+  "n_training_markets": 4424
+}
