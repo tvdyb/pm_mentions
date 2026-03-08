@@ -740,9 +740,9 @@ def build_pdf(data):
 
     story.append(Paragraph("Fee Structure", styles["SubHead"]))
     story.append(Paragraph(
-        "Polymarket charges ~2% on settlement; Kalshi charges per-contract fees. "
-        "At 13 cents average edge, fees consume 15-20% of gross profit. "
-        "The edge remains positive after fees but thinner than the gross numbers suggest.",
+        "Polymarket charges zero fees on mention markets. Kalshi charges $0.02 round-trip "
+        "per contract. At 13 cents average edge, Kalshi fees consume ~15% of gross profit. "
+        "After fees and 1¢ slippage, the edge remains positive.",
         styles["Body"],
     ))
 
