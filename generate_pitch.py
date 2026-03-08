@@ -432,7 +432,7 @@ def build_pdf(data):
     ))
     story.append(Paragraph(
         f"The finding: <b>markets overprice YES by an average of "
-        f"${summary['overpricing']:.0f} cents</b>. "
+        f"{summary['overpricing']*100:.0f} cents</b>. "
         f"The average opening YES price is ${summary['avg_opening_price']:.2f}, "
         f"but the actual mention rate is only {summary['base_rate']:.1%}. "
         f"A blind strategy of buying NO on every single market — no model, no filtering — "
